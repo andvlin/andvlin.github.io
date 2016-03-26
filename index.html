@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
-  {% if site.enforce_ssl %}
-    <!--redirect users to the https version of the website. but only on production domain, as set in _config.yml.-->
-    <script type="text/javascript">
-    var enforce = "{{ site.enforce_ssl }}";
-    if ((enforce == window.location.host) && (window.location.protocol != "https:"))
-      window.location = window.location.toString().replace(/^http:/, "https:");
-    </script>
-   {% endif %}
+  <meta http-eqiv="pragma" content="no-cache" />
+  <meta http-equiv="window-target" content="_top" />
+  <meta http-equiv="Content-Language" content="en-us" />
   <title>Andy Lin</title>
-  
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+        <a class="logo" href="/">GitHub:Developer</a>
+        <ul class ="nav">
+          <li><a href="/v3/" class="nav-about">about</a></li>
+          <li><a href="/program/" class-"nav-resume">resume</a></li>
+          <li><a href="https://github.com/andvlin" class="nav-github">github</a></li>
+          <li><a href="https://www.linkedin.com/in/andyvlin" class="nav-linkedin">linkedin</a></li>
+        </ul>
+      </div>
+    </div> <!--header-->
+  </div> <!--header-wrapper-->
 </head>
 Andy Lin
+<a href="https://twitter.com/andvlin" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Twitter</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </html>

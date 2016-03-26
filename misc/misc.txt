@@ -1,0 +1,11 @@
+Implementing redirect to https (from https://konklone.com/post/github-pages-now-sorta-supports-https-so-use-it):
+  <!--
+  {% if site.enforce_ssl %}
+    <!--redirect users to the https version of the website. but only on production domain, as set in _config.yml. --!>
+    <script type="text/javascript">
+    var enforce = "{{ site.enforce_ssl }}";
+    if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+      window.location = window.location.toString().replace(/^http:/, "https:");
+    </script>
+  {% endif %}
+  -->
